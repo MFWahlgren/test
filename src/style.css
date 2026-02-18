@@ -11,8 +11,8 @@
 }
 
 .left {
-    background-color: #1e7568;
-    color: white;
+    background-color: #f4c430;
+    color: solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,9 +95,9 @@
 }
 
 #btn-submit {
-    background: #4ed964;
+    background: #f4c430;
     border: none;
-    color: white;
+    color: solid black;
 }
 
 #btn-cancel:hover {
