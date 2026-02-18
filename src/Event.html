@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Events mod Madspild</title>
+    <h1>Madspild</h1>
+
+    <button onclick="window.location.href='hjem.html'">Hjem</button>
+    <button onclick="window.location.href='statistik.html'">Statistik</button>
+    <button onclick="window.location.href='tips.html'">Tips</button>
+    <button onclick="window.location.href='registrer.html'">Registrer</button>
+
+    <hr>
+    <br>
+    <style>
+        :root {
+            --primary-color: #44DA83;
+            --secondary-color: #81C784;
+            --background-color: #4FCF9C;
+            --card-color: #44DA83;
+            --text-color: #222222;
+            --accent-color: #1B5E20;
+        }
+
+        body {
+
+        font-family: Arial, sans-serif;
+        background-color: green(--background-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 40px;
+        }
+
+        h1 {
+        text-align: center;
+        color: var(--primary-color);
+        }
+
+        .intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+        }
+
+        .events-container {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .event-card {
+        background-color: var(--card-color);
+        padding: 20px;
+        border-radius: 10px;
+        width: 350px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.65);
+        transition: 0.3s ease;
+        }
+
+        .event-card: hover {
+        transform: translateY(-5px);
+        }
+
+        .event-card a {
+        text-decoration: underline;
+
+        }
+    </style>
+</head>
+<body>
+
+<h1>Events & tiltag mod Madspild</h1>
+
+<div class="intro">
+    <p>
+        På denne side kan du finde en række kommende events og eksisterende platforme,
+        hvor formålet er at bekæmpe madspild ved at tilbyde overskudsmad videre
+        i stedet for at smide det ud.
+    </p>
+</div>
+
+<div class="events-container">
+    <div class="event-card">
+        <p>
+            Dette initiativ er oprettet i samarbejde med supermarkedskæder,
+            som serverer retter af råvarer, der var på vej til at blive smidt ud.
+        </p>
+        <a href="https://unric.org/da/madspildsevent-var-en-stor-succes/" target="_blank">
+            Stop spild af mad - Rådhuspladsen
+        </a>
+    </div>
+
+    <div class="event-card">
+        <p>
+            I denne Facebook-gruppe informeres der om overskud af mad fra
+            private og erhverv, som ellers skulle smides ud.
+        </p>
+        <a href="https://www.facebook.com/groups/426751641028511/about?locale=da_DK" target="_blank">
+            Facebook-gruppe - Stop Spild Lokalt (København)
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
