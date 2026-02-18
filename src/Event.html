@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Events mod Madspild</title>
-    <h1>Madspild</h1>
 
-    <button onclick="window.location.href='hjem.html'">Hjem</button>
-    <button onclick="window.location.href='statistik.html'">Statistik</button>
-    <button onclick="window.location.href='tips.html'">Tips</button>
-    <button onclick="window.location.href='registrer.html'">Registrer</button>
-
-    <hr>
-    <br>
     <style>
         :root {
-            --primary-color: #44DA83;
-            --secondary-color: #81C784;
-            --background-color: #4FCF9C;
-            --card-color: #44DA83;
-            --text-color: #222222;
-            --accent-color: #1B5E20;
+            --yellow: #f4c430;
+            --black: #000;
+            --background: #ffffff;
+            --card-background: #f4c430;
+            --text-color: #000;
         }
 
         body {
 
         font-family: Arial, sans-serif;
-        background-color: green(--background-color);
+        background-color: var(--background);
         color: var(--text-color);
         margin: 0;
-        padding: 40px;
+        padding: 0;
         }
 
-        h1 {
+        .top-section{
+        background-color: var(--yellow);
+        padding: 15px 20px;
+        }
+
+        .menu{
         text-align: center;
-        color: var(--primary-color);
         }
 
-        .intro {
+        .menu button{
+        background-color: transparent;
+        color: var(--black);
+        border: 2px solid var(--black);
+        border-radius: 10px;
+        height: 34px;
+        padding: 0 14px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        }
+
+        .menu button:hover{
+        background-color: var(--black);
+        color: var(--yellow);
+        box-shadow: 0 11px 34px rgba(0,0,0,0.65);
+        }
+
+        h1{
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin: 20px 0;
+        color: var(--black);
+        }
+
+        .intro{
         text-align: center;
         max-width: 900px;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 30px auto;
+        padding: 0 20px;
         }
 
         .events-container {
@@ -47,28 +70,50 @@
         gap: 30px;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0 20px 40px 20px;
         }
 
         .event-card {
-        background-color: var(--card-color);
+        background-color: var(--card-background);
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 12px;
         width: 350px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.65);
-        transition: 0.3s ease;
+        transition: 0.2s ease;
         }
 
-        .event-card: hover {
+        .event-card:hover {
         transform: translateY(-5px);
         }
 
-        .event-card a {
+        .event-card a{
+        color: var(--black);
         text-decoration: underline;
-
+        font-weight: bold;
         }
+
+        hr{
+        border: 0;
+        border-top: 2px solid var(--black);
+        margin: 0;
+        }
+
     </style>
 </head>
 <body>
+
+<div class="top-section">
+    <div class="menu">
+        <h1>Madspild</h1>
+
+        <button onclick="window.location.href='hjem.html'">Hjem</button>
+        <button onclick="window.location.href='event.html'">Event</button>
+        <button onclick="window.location.href='tips.html'">Tips</button>
+        <button onclick="window.location.href='registrer.html'">Registrer</button>
+    </div>
+</div>
+
+<hr>
 
 <h1>Events & tiltag mod Madspild</h1>
 
@@ -103,5 +148,11 @@
 
 </div>
 
+<section class="cta">
+    <h2>Gør en forskel idag</h2>
+    <button>Start nu</button>
+</section>
+
 </body>
 </html>
+
