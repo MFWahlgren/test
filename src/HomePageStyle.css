@@ -3,6 +3,11 @@ h1{
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+   font-family: 'Arial', sans-seif;
+   background-color: #f9f9f9;
+}
+
 .menu {
     text-align: right;
 }
