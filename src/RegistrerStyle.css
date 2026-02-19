@@ -94,6 +94,14 @@ body{
     display: block;
 }
 
+.login-text{
+  margin: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+
 .btn {
     width: 100%;
     flex: 1;
