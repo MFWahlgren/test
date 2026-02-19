@@ -5,38 +5,53 @@
     <title>Registrer</title>
 
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        .container {
+        /* Container */
+        .page-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             height: 100vh;
+            font-family: Helvetica, sans-serif;
         }
 
-        .left {
-            background-color: #1e7568;
-            color: white;
+        /* Venstre sidebar */
+        .left-sidebar {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            background-color: #f4c430;
+            color: black;
         }
 
-        .right {
-            background-color: #f4f4f4;
+        .sidebar-title {
+            font-size: 2rem;
+        }
+
+        /* Højre sidebar */
+        .right-sidebar {
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 80px;
             gap: 10px;
+            background-color: #f4f4f4;
         }
 
+        /* Form wrapper */
+        .form-wrapper {
+            width: 100%;
+        }
+
+        /* Formular */
         .register-form {
-            font-family: Helvetica, sans-serif;
+            background: white;
             padding: 40px;
             border-radius: 34px;
             box-shadow: 0 11px 34px rgba(0, 0, 0, .65);
@@ -46,29 +61,39 @@
             gap: 22px;
         }
 
+        /* Formular titel */
+        .form-title {
+            font-size: 1.8rem;
+        }
+
+        /* Fornavn og efternavn input ved siden af hinanden */
         .name-wrapper {
             display: flex;
             gap: 10px;
         }
 
-        .form-input {
+        /* Input felterne */
+        .form-group {
             position: relative;
             flex: 1;
         }
 
-        .form-input input {
+        .form-group input {
             width: 100%;
             height: 56px;
             padding: 20px 16px 6px;
 
-            background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgb(110, 110, 115);
             border-radius: 12px;
 
             font-size: 17px;
+
+            background: rgba(255, 255, 255, 0.04);
+
         }
 
-        .form-input label {
+        /* Input labels inde i input felterne */
+        .form-group label {
             position: absolute;
             left: 16px;
             top: 18px;
@@ -80,36 +105,35 @@
             color: #888;
         }
 
-        .form-input input:focus + label,
-        .form-input input:not(:placeholder-shown) + label {
+        /* Label bevæger sig over curser ved focus i input feltet */
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
             top: 8px;
             font-size: 12px;
         }
 
-        .buttons {
+        /* Knapper */
+        .form-actions {
             display: flex;
             gap: 10px;
         }
 
         .btn {
-            height: 40px;
             flex: 1;
+            height: 40px;
             border-radius: 8px;
 
-            cursor: pointer;
             font-size: 14px;
+
+            cursor: pointer;
         }
 
+        /* Annuler knap */
         #btn-cancel {
             background: transparent;
             border: 1px solid #fe3b31;
             color: #fe3b31;
-        }
-
-        #btn-submit {
-            background: #4ed964;
-            border: none;
-            color: white;
+            transition: 0.2s;
         }
 
         #btn-cancel:hover {
@@ -117,54 +141,61 @@
             color: white;
         }
 
+        /* Submit knap */
+        #btn-submit {
+            background: #4ed964;
+            border: none;
+            color: white;
+        }
     </style>
 </head>
 <body>
-<div class="container">
-
-    <div class="left">
-        <h1>Registrer<br>SOMETHINGSOMETHING</h1>
-
+<div class="page-container">
+    <div class="left-sidebar">
+        <h1 class="sidebar-title">Registrer<br>Velkommen</h1>
     </div>
 
-    <div class="right">
-        <form class="register-form">
-            <h1 class="form-title">Registrer</h1>
+    <div class="right-sidebar">
+        <form class="form-wrapper">
+            <div class="register-form">
+                <h2 class="form-title">Registrer</h2>
 
-            <div class="name-wrapper">
-                <div class="form-input">
-                    <input type="text" placeholder=" ">
-                    <label>Fornavn</label>
+                <div class="name-wrapper">
+                    <div class="form-group">
+                        <input type="text" id="firstname" placeholder=" " required>
+                        <label for="firstname">Fornavn</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="lastname" placeholder=" " required>
+                        <label for="lastname">Efternavn</label>
+                    </div>
                 </div>
 
-                <div class="form-input">
-                    <input type="text" placeholder=" ">
-                    <label>Efternavn</label>
+
+                <div class="email-wrapper">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">E-mailadresse</label>
+                    </div>
                 </div>
-            </div>
 
-
-            <div class="email-wrapper">
-                <div class="form-input">
-                    <input type="email" placeholder=" ">
-                    <label>E-mailadresse</label>
+                <div class="password-wrapper">
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder=" " required>
+                        <label for="password">Adgangskode</label>
+                    </div>
                 </div>
-            </div>
 
-            <div class="password-wrapper">
-                <div class="form-input">
-                    <input type="password" placeholder=" ">
-                    <label>Adgangskode</label>
+                <div class="button-wrapper">
+                    <div class="form-actions">
+                        <button type="button" class="btn" id="btn-cancel">Annuller</button>
+                        <button type="submit" class="btn" id="btn-submit">Registrer</button>
+                    </div>
                 </div>
-            </div>
-
-            <div class="buttons">
-                <button type="button" class="btn" id="btn-cancel">Annuller</button>
-                <button type="submit" class="btn" id="btn-submit">Registrer</button>
             </div>
         </form>
     </div>
 </div>
-
 </body>
 </html>
