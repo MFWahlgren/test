@@ -62,8 +62,8 @@ body{
 }
 
 .bottom-text a {
-    display: inline-block;        /* gør dem større */
-    background-color: #f4c430;    /* grøn baggrund */
+    display: inline-block;
+    background-color: #f4c430;
     color: #000;
     padding: 10px 15px;
     margin: 8px 8px 0 0;
@@ -74,5 +74,5 @@ body{
 
 .bottom-text a:hover {
     background-color: #d4a81f;
-    transform: scale(1.05);       /* lille hover effekt */
+    transform: scale(1.05);
 }
