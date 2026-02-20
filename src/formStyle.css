@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #f4f4f4;
 }
 
@@ -105,11 +105,11 @@ body{
     cursor: pointer;
 }
 
-#btn-submit{
+#btn-submit {
     background: #f4c430;
     border: none;
     color: black;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .login-text, .signup-text {
@@ -121,14 +121,14 @@ body{
 
 /* Knap der fører til "modsatte" side*/
 #btn-registrer, #btn-login {
-    background: rgb(110,110,115, 20%);
+    background: rgb(110, 110, 115, 20%);
     border: none;
     transition: 0.2s;
 }
 
 #btn-registrer:hover,
-#btn-login:hover{
-    background: rgb(110,110,115);
+#btn-login:hover {
+    background: rgb(110, 110, 115);
     border: none;
     color: white;
 }
