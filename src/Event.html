@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Events mod Madspild</title>
+
+    <style>
+        *{box-sizing:border-box;}
+
+        :root{
+         --yellow:#f4c430;
+         --black:#000;
+         --background:#ffffff;
+         --card-background:#f4c430;
+         --text-color:#000;
+        }
+
+        body{
+         font-family:Arial,sans-serif;
+         background-color:var(--background);
+         color:var(--text-color);
+         margin:0;
+         padding:0;
+        }
+
+        /* Header */
+        .top-section{
+         background:#f4c430;
+         color:#222;
+         text-align:center;
+         padding:30px;
+        }
+
+        .menu{text-align:center;}
+
+        .menu button{
+         background-color:transparent;
+         color:var(--black);
+         border:2px solid var(--black);
+         border-radius:10px;
+         height:34px;
+         padding:0 14px;
+         cursor:pointer;
+         transition:0.2s ease;
+        }
+
+        .menu button:hover{
+         background-color:var(--black);
+         color:var(--yellow);
+         box-shadow:0 11px 34px rgba(0,0,0,0.65);
+        }
+
+        /* GRID LAYOUT */
+        .events-section{
+         display:grid;
+         grid-template-columns:320px 1fr 320px;
+         align-items:stretch;
+         background-color:#fff;
+         min-height:100vh;
+        }
+
+        .side{
+         overflow:hidden;
+        }
+
+        .side img{
+         width:100%;
+         height:120%;
+         object-fit:cover;
+         object-position:top;
+         display:block;
+        }
+
+        /* MIDTER DEL */
+        .middle{
+         padding:10px 0 40px;
+         border-left:6px solid rgba(0,0,0,0.35);
+         border-right:6px solid rgba(0,0,0,0.35);
+        }
+
+        .middle h1{
+         text-align:center;
+         font-family:'Poppins',sans-serif;
+         font-weight:800;
+         letter-spacing:2px;
+         text-transform:uppercase;
+         margin:0 0 10px 0;
+        }
+
+        .intro{
+         text-align:center;
+         max-width:900px;
+         margin:0 auto 30px auto;
+         padding:0 20px;
+        }
+
+        .events-container{
+         display:grid;
+         grid-template-columns:repeat(2,1fr);
+         gap:30px;
+         justify-content:center;
+         padding:0 20px 40px 20px;
+         max-width:800px;
+         margin:0 auto;
+        }
+
+        .event-card{
+         background-color:var(--card-background);
+         padding:20px;
+         border-radius:12px;
+         width:100%;
+         max-width:350px;
+         box-shadow:0 5px 15px rgba(0,0,0,0.65);
+         transition:0.2s ease;
+         display:block;
+         text-decoration:none;
+         color:inherit;
+         cursor:pointer;
+        }
+
+        .event-card:hover{
+         transform:translateY(-5px);
+        }
+
+        .event-card .event-link-text{
+         text-decoration:underline;
+         font-weight:bold;
+        }
+
+        /* CTA */
+        .cta{
+         background:#222;
+         color:white;
+         text-align:center;
+         padding:60px 20px;
+        }
+
+        .cta button{
+         margin-top:20px;
+         padding:15px 30px;
+         font-size:1rem;
+         border:none;
+         background:#f4c430;
+         cursor:pointer;
+         border-radius:8px;
+         transition:0.3s ease;
+        }
+
+        .cta button:hover{
+         background:#e0b420;
+        }
+
+        hr{
+         border:0;
+         border-top:2px solid var(--black);
+         margin:0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="logo-container">
+        <img src="StopMadspildLogo.png" class="logo">
+        <h1 class="logo-text" style="padding-left:10px">Stop<br>Madspilden</h1>
+    </div>
+
+
+    <div class="menu">
+        <button onclick="window.location.href='HomePage.html'">Hjem</button>
+        <button onclick="window.location.href='Event.html'">Event</button>
+        <button onclick="window.location.href='tips&tricks.html'">Tips</button>
+        <button onclick="window.location.href='LoginPage.html'">Registrer</button>
+    </div>
+</header>
+
+<hr>
+
+<section class="events-section">
+
+    <a class="side left" href="https://dk.wallpapers.com/frugt-og-grontsager-foto#google_vignette" target="_blank">
+        <img src="frugt-og-grontsager-foto-04joaxxtad9a1gne.jpg">
+    </a>
+
+    <div class="middle">
+
+        <h1>Events & tiltag mod Madspild</h1>
+
+        <div class="intro">
+            <p>
+                På denne side kan du finde en række kommende events og eksisterende platforme,
+                hvor formålet er at bekæmpe madspild ved at tilbyde overskudsmad videre
+                i stedet for at smide det ud - som du kan klikke dig ind på.
+            </p>
+        </div>
+
+        <div class="events-container">
+
+            <a class="event-card" href="https://unric.org/da/madspildsevent-var-en-stor-succes/" target="_blank">
+                <p>Dette initiativ er oprettet i samarbejde med supermarkedskæder.</p>
+                <span class="event-link-text">Stop spild af mad - Rådhuspladsen</span>
+            </a>
+
+            <a class="event-card" href="https://www.facebook.com/groups/426751641028511/about?locale=da_DK" target="_blank">
+                <p>Facebook-gruppe hvor overskudsmad deles lokalt.</p>
+                <span class="event-link-text">Stop Spild Lokalt</span>
+            </a>
+
+            <a class="event-card" href="https://foodsharingcph.org/activities/" target="_blank">
+                <p>FoodSharing Copenhagen popup-events.</p>
+                <span class="event-link-text">FoodSharing Copenhagen</span>
+            </a>
+
+            <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank">
+                <p>FødevareBanken donerer overskudsmad.</p>
+                <span class="event-link-text">FødevareBanken</span>
+            </a>
+
+        </div>
+    </div>
+
+    <a class="side right" href="https://www.shutterstock.com/" target="_blank">
+        <img src="delicious-assortment-savory-pastries-tartlets-260nw-2623839309.webp">
+    </a>
+
+</section>
+
+<section class="cta">
+    <h2>Gør en forskel idag</h2>
+    <button>Start nu</button>
+</section>
+
+</body>
+</html>
