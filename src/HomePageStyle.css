@@ -108,3 +108,32 @@ font-weight: bold;
     background-color: #d4a81f;
     transform: scale(1.05);
 }
+
+.cta {
+  background: #222222;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-buttons{
+margin-top: 20px;
+display: flex;
+gap: 14px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.cta button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  background: #f4c430;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.cta button:hover {
+  background: #e0b420;
+}
