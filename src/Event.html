@@ -23,33 +23,6 @@
          padding:0;
         }
 
-        /* Header */
-        .top-section{
-         background:#f4c430;
-         color:#222;
-         text-align:center;
-         padding:30px;
-        }
-
-        .menu{text-align:center;}
-
-        .menu button{
-         background-color:transparent;
-         color:var(--black);
-         border:2px solid var(--black);
-         border-radius:10px;
-         height:34px;
-         padding:0 14px;
-         cursor:pointer;
-         transition:0.2s ease;
-        }
-
-        .menu button:hover{
-         background-color:var(--black);
-         color:var(--yellow);
-         box-shadow:0 11px 34px rgba(0,0,0,0.65);
-        }
-
         /* GRID LAYOUT */
         .events-section{
          display:grid;
@@ -156,6 +129,7 @@
          margin:0;
         }
     </style>
+    <link rel="stylesheet" href="header.css">
 </head>
 
 <body>
@@ -174,8 +148,6 @@
         <button onclick="window.location.href='LoginPage.html'">Registrer</button>
     </div>
 </header>
-
-<hr>
 
 <section class="events-section">
 
@@ -197,24 +169,46 @@
 
         <div class="events-container">
 
-            <a class="event-card" href="https://unric.org/da/madspildsevent-var-en-stor-succes/" target="_blank">
-                <p>Dette initiativ er oprettet i samarbejde med supermarkedskæder.</p>
+            <a class="event-card" href="https://unric.org/da/madspildsevent-var-en-stor-succes/" target="_blank" rel="noopener">
+                <p>
+                    Dette initiativ er oprettet i samarbejde med supermarkedskæder,
+                    som serverer retter af råvarer, der var på vej til at blive smidt ud.
+                </p>
                 <span class="event-link-text">Stop spild af mad - Rådhuspladsen</span>
             </a>
 
-            <a class="event-card" href="https://www.facebook.com/groups/426751641028511/about?locale=da_DK" target="_blank">
-                <p>Facebook-gruppe hvor overskudsmad deles lokalt.</p>
-                <span class="event-link-text">Stop Spild Lokalt</span>
+            <a class="event-card" href="https://www.facebook.com/groups/426751641028511/about?locale=da_DK" target="_blank" rel="noopener">
+                <p>
+                    I denne Facebook-gruppe informeres der om overskud af mad fra
+                    private og erhverv, som ellers skulle smides ud.
+                </p>
+                <span class="event-link-text">Facebook-gruppe - Stop Spild Lokalt (København)</span>
             </a>
 
-            <a class="event-card" href="https://foodsharingcph.org/activities/" target="_blank">
-                <p>FoodSharing Copenhagen popup-events.</p>
-                <span class="event-link-text">FoodSharing Copenhagen</span>
+
+            <a class="event-card" href="https://foodsharingcph.org/activities/" target="_blank" rel="noopener">
+                <p>
+                    FoodSharing Copenhagen er en organisation som har til formål at reducere madspildet gennem forskellige popup-events rundt i København.
+                </p>
+                <span class="event-link-text">FoodSharing Copenhagen - Activities</span>
             </a>
 
-            <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank">
-                <p>FødevareBanken donerer overskudsmad.</p>
-                <span class="event-link-text">FødevareBanken</span>
+            <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank" rel="noopener">
+                <p>
+                    FødevareBanken indsamler overskudsmad fra virksomheder og producenter og
+                    donerer det videre til sociale organisationer, så maden bliver spist i stedet
+                    for at gå til spilde.
+                </p>
+                <span class="event-link-text">FødevareBanken - Projekter</span>
+            </a>
+
+            <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank" rel="noopener">
+                <p>
+                    FødevareBanken indsamler overskudsmad fra virksomheder og producenter og
+                    donerer det videre til sociale organisationer, så maden bliver spist i stedet
+                    for at gå til spilde.
+                </p>
+                <span class="event-link-text">FødevareBanken - Projekter</span>
             </a>
 
         </div>
