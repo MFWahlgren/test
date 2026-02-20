@@ -1,0 +1,178 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.page-container {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #f4f4f4;
+}
+
+/* Form wrapper */
+.form-wrapper {
+    margin-top: 40px;
+    align-self: center;
+    width: 40%;
+}
+
+/* Formular */
+.login-form, .register-form {
+    background: white;
+    padding: 40px;
+    border-radius: 34px;
+    box-shadow: 0 11px 34px rgba(0, 0, 0, .65);
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/* Formular titel */
+.form-title {
+    font-size: 1.8rem;
+}
+
+/* Input felterne */
+.form-group {
+    position: relative;
+    flex: 1;
+}
+
+.form-group input {
+    width: 100%;
+    height: 56px;
+    padding: 20px 16px 6px;
+
+    border: 1px solid rgb(110, 110, 115);
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+}
+
+/* Input labels inde i input felterne */
+.form-group label {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+
+    font-size: 17px;
+    pointer-events: none;
+    transition: .15s ease;
+
+    color: #888;
+}
+
+/* Label bevæger sig over curser ved focus i input feltet */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: 8px;
+    font-size: 12px;
+}
+
+/* Knapper */
+.form-actions {
+    display: block;
+}
+
+.btn {
+    width: 100%;
+    flex: 1;
+    height: 40px;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.signup-text{
+  margin: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* Registrer knap */
+#btn-registrer {
+    background: rgb(110,110,115, 20%);
+    border: none;
+    transition: 0.2s;
+}
+
+#btn-registrer:hover {
+    background: rgb(110,110,115);
+    border: none;
+    color: white;
+}
+
+/* Login knap */
+#btn-submit {
+    background: #f4c430;
+    border: none;
+    color: black;
+    margin-bottom:20px;
+}
+
+.hero {
+    background: #f4c430;
+    color: #222;
+    text-align: center;
+    padding: 30px;;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: -5px;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    justify-content: center;
+    margin-bottom:-10px;
+    margin-top:25px;
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+.menu button {
+    width: 100px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 8px;
+    border: 2px solid #000;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background-color: #000;
+    color: #f4c430;
+    box-shadow: 0 11px 34px rgba(0,0,0 .65);
+}
+
+.top-section {
+    background-color: #f4c430;
+    padding: 15px;
+}
