@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registrer</title>
+    <title>login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="formStyle.css">
 </head>
 <body>
+
 <header class="hero">
     <div class="logo-container">
         <img src="StopMadspildLogo.png" class="logo">
@@ -22,23 +23,11 @@
         <button onclick="window.location.href='LoginPage.html'">Registrer</button>
     </div>
 </header>
+
 <div class="page-container">
-    <form class="form-wrapper">
-        <div class="register-form">
-            <h2 class="form-title">Registrer</h2>
-
-            <div class="name-wrapper">
-                <div class="form-group">
-                    <input type="text" id="firstname" placeholder=" " required>
-                    <label for="firstname">Fornavn</label>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" id="lastname" placeholder=" " required>
-                    <label for="lastname">Efternavn</label>
-                </div>
-            </div>
-
+    <div class="form-wrapper">
+        <form class="login-form">
+            <h1 class="form-title">Login</h1>
 
             <div class="email-wrapper">
                 <div class="form-group">
@@ -56,15 +45,15 @@
 
             <div class="button-wrapper">
                 <div class="form-actions">
-                    <button type="submit" class="btn" id="btn-submit">Registrer</button>
-                    <p class="login-text">Har du allerede en konto?</p>
-                    <button type="button" class="btn" id="btn-login" onclick="window.location.href='LoginPage.html'">
-                        Login
+                    <button type="submit" class="btn" id="btn-submit">Login</button>
+                    <p class="signup-text">Har du ikke en konto endnu?</p>
+                    <button type="button" class="btn" id="btn-registrer"
+                            onclick="window.location.href='Registrer.html'">Registrer
                     </button>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 </body>
 </html>

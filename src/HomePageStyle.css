@@ -1,0 +1,40 @@
+.button-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("mad billede.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 600px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: white;
+
+    text-align: center;
+}
+
+.button-section a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.bottom-text a {
+    display: inline-block;
+    background-color: #f4c430;
+    color: #000;
+    padding: 10px 15px;
+    margin: 8px 8px 0 0;
+    border-radius: 8px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.bottom-text a:hover {
+    background-color: #d4a81f;
+    transform: scale(1.05);
+}
