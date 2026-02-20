@@ -5,186 +5,166 @@
     <title>Events mod Madspild</title>
 
     <style>
-        * { box-sizing: border-box; }
+        *{box-sizing:border-box;}
 
-        :root {
-            --yellow: #f4c430;
-            --black: #000;
-            --background: #ffffff;
-            --card-background: #f4c430;
-            --text-color: #000;
+        :root{
+         --yellow:#f4c430;
+         --black:#000;
+         --background:#ffffff;
+         --card-background:#f4c430;
+         --text-color:#000;
         }
 
-        body {
-
-        font-family: Arial, sans-serif;
-        background-color: var(--background);
-        color: var(--text-color);
-        margin: 0;
-        padding: 0;
+        body{
+         font-family:Arial,sans-serif;
+         background-color:var(--background);
+         color:var(--text-color);
+         margin:0;
+         padding:0;
         }
 
-        .top-section {
-    background: #f4c430;
-    color: #222;
-    text-align: center;
-    padding: 30px;;
-}
-
-.top-section h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    margin-bottom: -5px;
-}
-
-.top-section p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-        .menu{
-        text-align: center;
+        /* HEADER */
+        .top-section{
+         background:#f4c430;
+         color:#222;
+         text-align:center;
+         padding:30px;
         }
+
+        .menu{text-align:center;}
 
         .menu button{
-        background-color: transparent;
-        color: var(--black);
-        border: 2px solid var(--black);
-        border-radius: 10px;
-        height: 34px;
-        padding: 0 14px;
-        cursor: pointer;
-        transition: 0.2s ease;
+         background-color:transparent;
+         color:var(--black);
+         border:2px solid var(--black);
+         border-radius:10px;
+         height:34px;
+         padding:0 14px;
+         cursor:pointer;
+         transition:0.2s ease;
         }
 
         .menu button:hover{
-        background-color: var(--black);
-        color: var(--yellow);
-        box-shadow: 0 11px 34px rgba(0,0,0,0.65);
+         background-color:var(--black);
+         color:var(--yellow);
+         box-shadow:0 11px 34px rgba(0,0,0,0.65);
         }
 
-        h1{
-        text-align: center;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 800;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin: 20px 0;
-        color: var(--black);
-        }
-
-        .intro{
-        text-align: center;
-        max-width: 900px;
-        margin: 0 auto 30px auto;
-        padding: 0 20px;
-        }
-
-        .events-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        justify-content: center;
-        padding: 0 20px 40px 20px;
-        max-width: 800px;
-        margin: 0 auto;
-        }
-
-        .event-card {
-        background-color: var(--card-background);
-        padding: 20px;
-        border-radius: 12px;
-        width: 100%;
-        max-width: 350px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.65);
-        transition: 0.2s ease;
-        display: block;
-        text-decoration: none;
-        color: inherit;
-        cursor: pointer;
-        }
-
-        .event-card:hover {
-        transform: translateY(-5px);
-        }
-
-        .event-card p{
-        text-decoration: none;
-        }
-
-        .event-card .event-link-text{
-        text-decoration: underline;
-        font-weight: bold;
-        }
-
+        /* GRID LAYOUT */
         .events-section{
-        display: grid;
-        grid-template-columns: 320px 1fr 320px;
-        align-items: stretch;
-        background-color: #fff;
+         display:grid;
+         grid-template-columns:320px 1fr 320px;
+         align-items:stretch;
+         background-color:#fff;
+         min-height:100vh;
         }
 
         .side{
-        background-repeat: no-repeat;
-        background-position: center,
-        background-size: contain;
-        min-height: 100%
+         overflow:hidden;
         }
 
-        .side.right{
-        background-image: url("https://www.shutterstock.com/image-photo/delicious-assortment-savory-pastries-tartlets-260nw-2623839309.jpg");
+        .side img{
+         width:100%;
+         height:120%;
+         object-fit:cover;
+         object-position:top;
+         display:block;
         }
 
+        /* MIDTER DEL */
         .middle{
-        padding: 10px 0 40px;
-        border-left: 6px solid rgba(0,0,0,0.35);
-        border-right: 6px solid rgba(0,0,0,0.35);
+         padding:10px 0 40px;
+         border-left:6px solid rgba(0,0,0,0.35);
+         border-right:6px solid rgba(0,0,0,0.35);
+        }
+
+        .middle h1{
+         text-align:center;
+         font-family:'Poppins',sans-serif;
+         font-weight:800;
+         letter-spacing:2px;
+         text-transform:uppercase;
+         margin:0 0 10px 0; /* 🔥 fjerner luft i toppen */
+        }
+
+        .intro{
+         text-align:center;
+         max-width:900px;
+         margin:0 auto 30px auto;
+         padding:0 20px;
+        }
+
+        .events-container{
+         display:grid;
+         grid-template-columns:repeat(2,1fr);
+         gap:30px;
+         justify-content:center;
+         padding:0 20px 40px 20px;
+         max-width:800px;
+         margin:0 auto;
+        }
+
+        .event-card{
+         background-color:var(--card-background);
+         padding:20px;
+         border-radius:12px;
+         width:100%;
+         max-width:350px;
+         box-shadow:0 5px 15px rgba(0,0,0,0.65);
+         transition:0.2s ease;
+         display:block;
+         text-decoration:none;
+         color:inherit;
+         cursor:pointer;
+        }
+
+        .event-card:hover{
+         transform:translateY(-5px);
+        }
+
+        .event-card .event-link-text{
+         text-decoration:underline;
+         font-weight:bold;
+        }
+
+        /* CTA */
+        .cta{
+         background:#222;
+         color:white;
+         text-align:center;
+         padding:60px 20px;
+        }
+
+        .cta button{
+         margin-top:20px;
+         padding:15px 30px;
+         font-size:1rem;
+         border:none;
+         background:#f4c430;
+         cursor:pointer;
+         border-radius:8px;
+         transition:0.3s ease;
+        }
+
+        .cta button:hover{
+         background:#e0b420;
         }
 
         hr{
-        border: 0;
-        border-top: 2px solid var(--black);
-        margin: 0;
+         border:0;
+         border-top:2px solid var(--black);
+         margin:0;
         }
-
-        .card:hover {
-transform: translateY(-8px);
-box-shadow: 0 10px 25px rgba(0,0,0,0.65);
-}
-
-.card h3 {
-margin-bottom: 10px;
-}
-
-.cta {
-background: #222;
-color: white;
-text-align: center;
-padding: 60px 20px;
-}
-
-.cta button {
-margin-top: 20px;
-padding: 15px 30px;
-font-size: 1rem;
-border: none;
-background: #f4c430;
-cursor: pointer;
-border-radius: 8px;
-transition: 0.3s ease;
-}
-
-.cta button:hover {
-background: #e0b420;
-}
-
     </style>
 </head>
+
 <body>
 
-<header class="top-section">
-    <img src="ChatGPT Image 19. feb. 2026, 13.19.12.png" height="150px">
+<header class="hero">
+    <div class="logo-container">
+        <img src="StopMadspildLogo.png" class="logo">
+        <h1 class="logo-text" style="padding-left:10px">Stop<br>Madspilden</h1>
+    </div>
 
 
     <div class="menu">
@@ -195,71 +175,55 @@ background: #e0b420;
     </div>
 </header>
 
-
 <hr>
 
-<h1>Events & tiltag mod Madspild</h1>
-
 <section class="events-section">
-    <div class="side left"> </div>
 
-<div class="middle">
-    <div class="intro">
-    <p>
-        På denne side kan du finde en række kommende events og eksisterende platforme,
-        hvor formålet er at bekæmpe madspild ved at tilbyde overskudsmad videre
-        i stedet for at smide det ud - som du kan klikke dig ind på.
-    </p>
-</div>
-
-<div class="events-container">
-
-    <a class="event-card" href="https://unric.org/da/madspildsevent-var-en-stor-succes/" target="_blank" rel="noopener">
-        <p>
-            Dette initiativ er oprettet i samarbejde med supermarkedskæder,
-            som serverer retter af råvarer, der var på vej til at blive smidt ud.
-        </p>
-        <span class="event-link-text">Stop spild af mad - Rådhuspladsen</span>
+    <a class="side left" href="https://dk.wallpapers.com/frugt-og-grontsager-foto#google_vignette" target="_blank">
+        <img src="frugt-og-grontsager-foto-04joaxxtad9a1gne.jpg">
     </a>
 
-    <a class="event-card" href="https://www.facebook.com/groups/426751641028511/about?locale=da_DK" target="_blank" rel="noopener">
-        <p>
-            I denne Facebook-gruppe informeres der om overskud af mad fra
-            private og erhverv, som ellers skulle smides ud.
-        </p>
-        <span class="event-link-text">Facebook-gruppe - Stop Spild Lokalt (København)</span>
+    <div class="middle">
+
+        <h1>Events & tiltag mod Madspild</h1>
+
+        <div class="intro">
+            <p>
+                På denne side kan du finde en række kommende events og eksisterende platforme,
+                hvor formålet er at bekæmpe madspild ved at tilbyde overskudsmad videre
+                i stedet for at smide det ud - som du kan klikke dig ind på.
+            </p>
+        </div>
+
+        <div class="events-container">
+
+            <a class="event-card" href="https://unric.org/da/madspildsevent-var-en-stor-succes/" target="_blank">
+                <p>Dette initiativ er oprettet i samarbejde med supermarkedskæder.</p>
+                <span class="event-link-text">Stop spild af mad - Rådhuspladsen</span>
+            </a>
+
+            <a class="event-card" href="https://www.facebook.com/groups/426751641028511/about?locale=da_DK" target="_blank">
+                <p>Facebook-gruppe hvor overskudsmad deles lokalt.</p>
+                <span class="event-link-text">Stop Spild Lokalt</span>
+            </a>
+
+            <a class="event-card" href="https://foodsharingcph.org/activities/" target="_blank">
+                <p>FoodSharing Copenhagen popup-events.</p>
+                <span class="event-link-text">FoodSharing Copenhagen</span>
+            </a>
+
+            <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank">
+                <p>FødevareBanken donerer overskudsmad.</p>
+                <span class="event-link-text">FødevareBanken</span>
+            </a>
+
+        </div>
+    </div>
+
+    <a class="side right" href="https://www.shutterstock.com/" target="_blank">
+        <img src="delicious-assortment-savory-pastries-tartlets-260nw-2623839309.webp">
     </a>
 
-
-    <a class="event-card" href="https://foodsharingcph.org/activities/" target="_blank" rel="noopener">
-        <p>
-            FoodSharing Copenhagen er en organisation som har til formål at reducere madspildet gennem forskellige popup-events rundt i København.
-        </p>
-        <span class="event-link-text">FoodSharing Copenhagen - Activities</span>
-    </a>
-
-    <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank" rel="noopener">
-        <p>
-            FødevareBanken indsamler overskudsmad fra virksomheder og producenter og
-            donerer det videre til sociale organisationer, så maden bliver spist i stedet
-            for at gå til spilde.
-        </p>
-        <span class="event-link-text">FødevareBanken - Projekter</span>
-    </a>
-
-    <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank" rel="noopener">
-        <p>
-            FødevareBanken indsamler overskudsmad fra virksomheder og producenter og
-            donerer det videre til sociale organisationer, så maden bliver spist i stedet
-            for at gå til spilde.
-        </p>
-        <span class="event-link-text">FødevareBanken - Projekter</span>
-    </a>
-
-</div>
-</div>
-
-    <div class="side right"></div>
 </section>
 
 <section class="cta">
@@ -269,4 +233,3 @@ background: #e0b420;
 
 </body>
 </html>
-
