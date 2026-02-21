@@ -6,23 +6,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tips.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 
 </head>
-<body>
-<header class="hero">
-    <div class="logo-container">
-        <img src="StopMadspildLogo.png" class="logo">
-        <h1 class="logo-text" style="padding-left:10px">Stop<br>Madspilden</h1>
-    </div>
+ <body>
+ <header class="hero">
+     <a class="logo-link" href="HomePage.html">
+         <div class="logo-container">
+             <img src="StopMadspildLogo.png" class="logo">
+             <h1 class="logo-text" style="padding-left:10px">Stop<br>Madspilden</h1>
+         </div>
+     </a>
 
 
-    <div class="menu">
-        <button onclick="window.location.href='HomePage.html'">Hjem</button>
-        <button onclick="window.location.href='Event.html'">Event</button>
-        <button onclick="window.location.href='tips&tricks.html'">Tips</button>
-        <button onclick="window.location.href='LoginPage.html'">Registrer</button>
-    </div>
-</header>
+     <div class="menu">
+         <button onclick="window.location.href='HomePage.html'">Hjem</button>
+         <button onclick="window.location.href='Event.html'">Events</button>
+         <button onclick="window.location.href='tips&tricks.html'">Tips</button>
+     </div>
+
+     <a class="register-link" href="LoginPage.html">Registrer/Log ind</a>
+ </header>
 
 <section class="tips-section">
     <h2>Tips & Tricks</h2>
@@ -117,10 +121,14 @@
     </div>
 </section>
 
-<section class="cta">
-    <h2>Gør en forskel idag</h2>
-    <button>Start nu</button>
-</section>
+  <section class="cta">
+      <img src="StopMadspildLogo.png" class="cta-logo" alt="Logo">
 
-</body>
+      <div class="cta-buttons">
+          <button type="button" onclick="window.location.href='Registrer.html'">Registrer/Log ind</button>
+          <button type="button" onclick="window.location.href='tips&tricks.html'">Se tips</button>
+          <button type="button" onclick="window.location.href='Event.html'">Find events</button>
+      </div>
+  </section>
+ </body>
 </html>

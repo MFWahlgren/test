@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Events mod Madspild</title>
+    <link rel="stylesheet" href="footer.css">
+
 
     <style>
         *{box-sizing:border-box;}
@@ -36,6 +38,18 @@
          overflow:hidden;
         }
 
+        .side.left{
+        background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("frugt-og-grontsager-foto-04joaxxtad9a1gne.jpg");
+        }
+
+        .side.right{
+        background-image:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url(food-groups.png);
+        }
+
         .side img{
          width:100%;
          height:120%;
@@ -44,11 +58,10 @@
          display:block;
         }
 
-        /* MIDTER DEL */
         .middle{
          padding:10px 0 40px;
-         border-left:6px solid rgba(0,0,0,0.35);
-         border-right:6px solid rgba(0,0,0,0.35);
+         border-left: 0;
+         border-right: 0;
         }
 
         .middle h1{
@@ -100,35 +113,12 @@
          font-weight:bold;
         }
 
-        /* CTA */
-        .cta{
-         background:#222;
-         color:white;
-         text-align:center;
-         padding:60px 20px;
-        }
-
-        .cta button{
-         margin-top:20px;
-         padding:15px 30px;
-         font-size:1rem;
-         border:none;
-         background:#f4c430;
-         cursor:pointer;
-         border-radius:8px;
-         transition:0.3s ease;
-        }
-
-        .cta button:hover{
-         background:#e0b420;
-        }
-
         hr{
          border:0;
          border-top:2px solid var(--black);
          margin:0;
         }
-    </style>
+        <img src="food-groups.png" height="960" width="432"/></style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
 </head>
@@ -136,28 +126,32 @@
 <body>
 
 <header class="hero">
-    <div class="logo-container">
-        <img src="StopMadspildLogo.png" class="logo">
-        <h1 class="logo-text" style="padding-left:10px">Stop<br>Madspilden</h1>
-    </div>
+    <a class="logo-link" href="HomePage.html">
+        <div class="logo-container">
+            <img src="StopMadspildLogo.png" class="logo">
+            <h1 class="logo-text" style="padding-left:10px">Stop<br>Madspilden</h1>
+        </div>
+    </a>
 
 
     <div class="menu">
         <button onclick="window.location.href='HomePage.html'">Hjem</button>
-        <button onclick="window.location.href='Event.html'">Event</button>
+        <button onclick="window.location.href='Event.html'">Events</button>
         <button onclick="window.location.href='tips&tricks.html'">Tips</button>
-        <button onclick="window.location.href='LoginPage.html'">Registrer</button>
     </div>
+
+    <a class="register-link" href="LoginPage.html">Registrer/Log ind</a>
 </header>
 
 <section class="events-section">
 
-    <a class="side left" href="https://dk.wallpapers.com/frugt-og-grontsager-foto#google_vignette" target="_blank">
-        <img src="frugt-og-grontsager-foto-04joaxxtad9a1gne.jpg">
+    <a class="side left" href="frugt-og-grontsager-foto-04joaxxtad9a1gne.jpg" target="_blank">
     </a>
 
     <div class="middle">
 
+        <br>
+        <br>
         <h1>Events & tiltag mod Madspild</h1>
 
         <div class="intro">
@@ -203,28 +197,22 @@
                 <span class="event-link-text">FødevareBanken - Projekter</span>
             </a>
 
-            <a class="event-card" href="https://foedevarebanken.dk/projekter/" target="_blank" rel="noopener">
-                <p>
-                    FødevareBanken indsamler overskudsmad fra virksomheder og producenter og
-                    donerer det videre til sociale organisationer, så maden bliver spist i stedet
-                    for at gå til spilde.
-                </p>
-                <span class="event-link-text">FødevareBanken - Projekter</span>
-            </a>
-
         </div>
     </div>
 
-    <a class="side right" href="https://www.shutterstock.com/" target="_blank">
-        <img src="delicious-assortment-savory-pastries-tartlets-260nw-2623839309.webp">
+    <a class="side right" href="food-groups.png" target="_blank">
     </a>
 
 </section>
 
 <section class="cta">
-    <h2>Gør en forskel idag</h2>
-    <button>Start nu</button>
-</section>
+    <img src="StopMadspildLogo.png" class="cta-logo" alt="Logo">
 
+    <div class="cta-buttons">
+        <button type="button" onclick="window.location.href='Registrer.html'">Registrer/Log ind</button>
+        <button type="button" onclick="window.location.href='tips&tricks.html'">Se tips</button>
+        <button type="button" onclick="window.location.href='Event.html'">Find events</button>
+    </div>
+</section>
 </body>
 </html>

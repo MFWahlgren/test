@@ -5,26 +5,32 @@
     box-sizing: border-box;
 }
 
+html, body{
+height: 100%;
+}
+
 body {
+    margin: 0;
     background-color: #f4f4f4;
 }
 
 /* Container */
 .page-container {
     font-family: Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    background-color: #f4f4f4;
+    min-height: 100vh;          /* fylder hele skærmen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;     /* centrer indholdet */
+      background-color: #f4f4f4;
+      padding: 40px 0;
 }
 
 /* Form wrapper */
 .form-wrapper {
-    margin-top: 40px;
-    align-self: center;
-    width: 40%;
+width: min(720px, 90%);
+margin: 40px auto 0;
 }
+
 
 /* Formular */
 .login-form, .register-form {
